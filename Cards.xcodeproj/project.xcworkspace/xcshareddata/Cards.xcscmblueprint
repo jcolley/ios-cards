@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "5F76A202F6EADEC807A424AABFC3FFB1D98731BB",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5F76A202F6EADEC807A424AABFC3FFB1D98731BB" : 9223372036854775807,
+    "7F7E2F51C9C1CBE99C2BFD5B60FF34D8BF4021B3" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "CCE207DB-8063-4530-B0AB-881268181144",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5F76A202F6EADEC807A424AABFC3FFB1D98731BB" : "Cards\/",
+    "7F7E2F51C9C1CBE99C2BFD5B60FF34D8BF4021B3" : "..\/.."
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "Cards",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "Cards.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/webjocky\/ios-cards.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5F76A202F6EADEC807A424AABFC3FFB1D98731BB"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/webjocky\/DojoAssignments.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "7F7E2F51C9C1CBE99C2BFD5B60FF34D8BF4021B3"
+    }
+  ]
+}

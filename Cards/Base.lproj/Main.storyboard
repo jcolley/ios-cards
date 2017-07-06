@@ -1,14 +1,18 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +20,149 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="of" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xXx-8E-trT">
+                                <rect key="frame" x="180" y="28" width="16" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="currentCardNum" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyR-Z5-E9W">
+                                <rect key="frame" x="43" y="28" width="129" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="numCardsLeftHand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bc5-TU-MkB">
+                                <rect key="frame" x="204" y="28" width="150" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="xXA-tO-Rdf">
+                                <rect key="frame" x="81" y="57" width="213" height="297"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I8g-1p-Jkv">
+                                <rect key="frame" x="111" y="85" width="54" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clubs" translatesAutoresizingMaskIntoConstraints="NO" id="ncX-4w-AFe">
+                                <rect key="frame" x="106" y="112" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="p5R-e8-Cto"/>
+                                    <constraint firstAttribute="height" constant="32" id="qAQ-q6-vaC"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rFa-SO-ggP">
+                                <rect key="frame" x="215" y="303" width="54" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clubs" translatesAutoresizingMaskIntoConstraints="NO" id="VKH-xi-2JK">
+                                <rect key="frame" x="242" y="269" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="6Ww-A8-m4B"/>
+                                    <constraint firstAttribute="width" constant="32" id="e57-48-2Xg"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bPM-5y-ymx">
+                                <rect key="frame" x="81" y="362" width="31" height="30"/>
+                                <state key="normal" title="Prev"/>
+                                <connections>
+                                    <action selector="prevCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1tG-fT-USo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lV0-pG-Hpz">
+                                <rect key="frame" x="262" y="362" width="32" height="30"/>
+                                <state key="normal" title="Next"/>
+                                <connections>
+                                    <action selector="nextCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ZMT-FF-cPG"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OrQ-na-kOe">
+                                <rect key="frame" x="170" y="429" width="36" height="30"/>
+                                <state key="normal" title="Draw"/>
+                                <connections>
+                                    <action selector="drawCard:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WOF-9J-vtR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number of Cards Remaining:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TAf-gn-fU8">
+                                <rect key="frame" x="24" y="400" width="220" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="deckRemains" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8e-fu-PYE">
+                                <rect key="frame" x="252" y="400" width="103" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clubs" translatesAutoresizingMaskIntoConstraints="NO" id="c0h-Rt-CpY">
+                                <rect key="frame" x="138" y="155" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="O8d-b8-712"/>
+                                    <constraint firstAttribute="width" constant="100" id="ps0-Ll-k4J"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="bPM-5y-ymx" firstAttribute="leading" secondItem="xXA-tO-Rdf" secondAttribute="leading" id="8Hr-5e-oXi"/>
+                            <constraint firstItem="xXA-tO-Rdf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9Pq-gu-Psr"/>
+                            <constraint firstItem="Bc5-TU-MkB" firstAttribute="baseline" secondItem="xXx-8E-trT" secondAttribute="baseline" id="AHT-Am-3XP"/>
+                            <constraint firstItem="xXA-tO-Rdf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Azl-ul-7Uf"/>
+                            <constraint firstItem="xXx-8E-trT" firstAttribute="leading" secondItem="dyR-Z5-E9W" secondAttribute="trailing" constant="8" symbolic="YES" id="Cy3-Xt-neg"/>
+                            <constraint firstItem="dyR-Z5-E9W" firstAttribute="baseline" secondItem="xXx-8E-trT" secondAttribute="baseline" id="DSC-LM-1pI"/>
+                            <constraint firstItem="ncX-4w-AFe" firstAttribute="top" secondItem="I8g-1p-Jkv" secondAttribute="bottom" constant="3" id="DmD-zR-BZ2"/>
+                            <constraint firstItem="rFa-SO-ggP" firstAttribute="bottom" secondItem="xXA-tO-Rdf" secondAttribute="bottom" constant="-27" id="Efy-kC-6vt"/>
+                            <constraint firstItem="lV0-pG-Hpz" firstAttribute="trailing" secondItem="xXA-tO-Rdf" secondAttribute="trailing" id="F8P-Nn-kDy"/>
+                            <constraint firstAttribute="trailing" secondItem="g8e-fu-PYE" secondAttribute="trailing" constant="20" symbolic="YES" id="JLw-qN-AFq"/>
+                            <constraint firstItem="xXx-8E-trT" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="KQ0-L9-bOn"/>
+                            <constraint firstItem="c0h-Rt-CpY" firstAttribute="centerY" secondItem="xXA-tO-Rdf" secondAttribute="centerY" id="M9x-si-fu6"/>
+                            <constraint firstItem="lV0-pG-Hpz" firstAttribute="top" secondItem="xXA-tO-Rdf" secondAttribute="bottom" constant="8" symbolic="YES" id="RvZ-HX-LBa"/>
+                            <constraint firstItem="lV0-pG-Hpz" firstAttribute="baseline" secondItem="bPM-5y-ymx" secondAttribute="baseline" id="Wku-SL-lt8"/>
+                            <constraint firstItem="Bc5-TU-MkB" firstAttribute="leading" secondItem="xXx-8E-trT" secondAttribute="trailing" constant="8" symbolic="YES" id="aM4-eY-aH3"/>
+                            <constraint firstItem="g8e-fu-PYE" firstAttribute="leading" secondItem="TAf-gn-fU8" secondAttribute="trailing" constant="8" symbolic="YES" id="atH-ue-Cpo"/>
+                            <constraint firstItem="g8e-fu-PYE" firstAttribute="top" secondItem="lV0-pG-Hpz" secondAttribute="bottom" constant="8" id="bMj-0D-cJz"/>
+                            <constraint firstItem="OrQ-na-kOe" firstAttribute="top" secondItem="TAf-gn-fU8" secondAttribute="bottom" constant="8" id="dZd-zi-tSr"/>
+                            <constraint firstItem="OrQ-na-kOe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g51-PO-UD5"/>
+                            <constraint firstItem="rFa-SO-ggP" firstAttribute="trailing" secondItem="xXA-tO-Rdf" secondAttribute="trailing" constant="-25" id="gdX-ze-cnG"/>
+                            <constraint firstItem="xXx-8E-trT" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hPD-R8-Rgr"/>
+                            <constraint firstItem="I8g-1p-Jkv" firstAttribute="leading" secondItem="xXA-tO-Rdf" secondAttribute="leading" constant="30" id="mJm-dq-oBr"/>
+                            <constraint firstItem="xXA-tO-Rdf" firstAttribute="top" secondItem="xXx-8E-trT" secondAttribute="bottom" constant="8" id="nLt-w1-ND7"/>
+                            <constraint firstItem="TAf-gn-fU8" firstAttribute="baseline" secondItem="g8e-fu-PYE" secondAttribute="baseline" id="s1e-R4-EVm"/>
+                            <constraint firstItem="rFa-SO-ggP" firstAttribute="top" secondItem="VKH-xi-2JK" secondAttribute="bottom" constant="2" id="s9B-AJ-4yS"/>
+                            <constraint firstItem="VKH-xi-2JK" firstAttribute="trailing" secondItem="xXA-tO-Rdf" secondAttribute="trailing" constant="-20" id="uX0-Uo-7i9"/>
+                            <constraint firstItem="c0h-Rt-CpY" firstAttribute="centerX" secondItem="xXA-tO-Rdf" secondAttribute="centerX" id="vrm-SD-pZk"/>
+                            <constraint firstItem="I8g-1p-Jkv" firstAttribute="top" secondItem="xXA-tO-Rdf" secondAttribute="top" constant="28" id="xoX-An-yoU"/>
+                            <constraint firstItem="ncX-4w-AFe" firstAttribute="leading" secondItem="xXA-tO-Rdf" secondAttribute="leading" constant="25" id="z0z-N0-095"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="DrawCardButton" destination="OrQ-na-kOe" id="lQ0-eG-xUN"/>
+                        <outlet property="NextCardButton" destination="lV0-pG-Hpz" id="uXd-3B-lJL"/>
+                        <outlet property="PrevCardButton" destination="bPM-5y-ymx" id="1pz-i8-PXf"/>
+                        <outlet property="currentCardNumHand" destination="dyR-Z5-E9W" id="2lo-ef-XKC"/>
+                        <outlet property="deckRemaining" destination="g8e-fu-PYE" id="8yn-46-TFO"/>
+                        <outlet property="numCardsLeftHand" destination="Bc5-TU-MkB" id="6EP-lw-T6C"/>
+                        <outletCollection property="cardVal" destination="I8g-1p-Jkv" collectionClass="NSMutableArray" id="ehC-KZ-E7B"/>
+                        <outletCollection property="cardSuit" destination="ncX-4w-AFe" collectionClass="NSMutableArray" id="RqI-s6-40T"/>
+                        <outletCollection property="cardSuit" destination="VKH-xi-2JK" collectionClass="NSMutableArray" id="jxj-Ar-qUr"/>
+                        <outletCollection property="cardVal" destination="rFa-SO-ggP" collectionClass="NSMutableArray" id="kwT-Jh-lGv"/>
+                        <outletCollection property="cardSuit" destination="c0h-Rt-CpY" collectionClass="NSMutableArray" id="pGq-ve-PZY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="card" width="213" height="297"/>
+        <image name="clubs" width="200" height="200"/>
+    </resources>
 </document>

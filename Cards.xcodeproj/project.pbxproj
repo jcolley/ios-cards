@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F377B3371F0D9E0100E5B8AE /* cardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377B3361F0D9E0100E5B8AE /* cardController.swift */; };
 		F3EFFB831F0D95E7008088B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFFB821F0D95E7008088B9 /* AppDelegate.swift */; };
 		F3EFFB851F0D95E7008088B9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3EFFB841F0D95E7008088B9 /* ViewController.swift */; };
 		F3EFFB881F0D95E7008088B9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3EFFB861F0D95E7008088B9 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F377B3361F0D9E0100E5B8AE /* cardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cardController.swift; path = "../../../Deck of Cards/cardController.swift"; sourceTree = "<group>"; };
 		F3EFFB7F1F0D95E7008088B9 /* Cards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3EFFB821F0D95E7008088B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3EFFB841F0D95E7008088B9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		F3EFFB811F0D95E7008088B9 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				F377B3361F0D9E0100E5B8AE /* cardController.swift */,
 				F3EFFB821F0D95E7008088B9 /* AppDelegate.swift */,
 				F3EFFB841F0D95E7008088B9 /* ViewController.swift */,
 				F3EFFB861F0D95E7008088B9 /* Main.storyboard */,
@@ -96,6 +99,7 @@
 				TargetAttributes = {
 					F3EFFB7E1F0D95E7008088B9 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = TCL7AD4NT9;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -136,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F377B3371F0D9E0100E5B8AE /* cardController.swift in Sources */,
 				F3EFFB851F0D95E7008088B9 /* ViewController.swift in Sources */,
 				F3EFFB831F0D95E7008088B9 /* AppDelegate.swift in Sources */,
 			);
@@ -262,6 +267,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TCL7AD4NT9;
 				INFOPLIST_FILE = Cards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.obviosoft.Cards;
@@ -274,6 +280,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = TCL7AD4NT9;
 				INFOPLIST_FILE = Cards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.obviosoft.Cards;
@@ -301,6 +308,7 @@
 				F3EFFB931F0D95E7008088B9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
