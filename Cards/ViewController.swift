@@ -90,7 +90,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func nextCard(_ sender: UIButton) {
-        print("Next Card: \(curCard)")
         PrevCardButton.isHidden = false
         
         if curCard <= hand.count - 1 {
@@ -107,7 +106,6 @@ class ViewController: UIViewController {
     }
     
     @IBAction func prevCard(_ sender: UIButton) {
-        print("Prev Card: \(curCard)")
         NextCardButton.isHidden = false
         
         if curCard > 0 {
