@@ -53,6 +53,7 @@ class blackjackViewController: UIViewController {
     @IBOutlet weak var hitPileSuit6: UIImageView!
     @IBOutlet weak var hitPileCardback6: UIImageView!
     @IBOutlet weak var hitPileCard6: UIImageView!
+    @IBOutlet weak var statusMessage: UIButton!
     
     
     @IBAction func passButtonTapped(_ sender: UIButton) {
@@ -72,7 +73,11 @@ class blackjackViewController: UIViewController {
     }
     
     @IBAction func restartButtonTapped(_ sender: UIButton) {
-        
+        initGame()
+    }
+    
+    @IBAction func statusButtonTapped(_ sender: UIButton) {
+        sender.isHidden = true
     }
     
     //Global vars
@@ -145,8 +150,31 @@ class blackjackViewController: UIViewController {
         hitPileSuit6.isHidden = true
         hitPileCardback6.isHidden = true
         hitPileCard6.isHidden = true
+        
+        checkWin()
     }
     
+    func checkWin(){
+        let playerTotal = Int(playerHandValue0.text!)! + Int(playerHandValue1.text!)!
+        let dealerTotal = Int(dealerHandValue0.text!)! + Int(dealerHandValue1.text!)!
+        
+        if playerTotal == 21 {
+            if dealerTotal == 21 {
+                gameStatus(status: "DRAW")
+            }
+        }
+    }
+    
+    func gameStatus(status: String) {
+        if status == "DRAW" {
+            showMsg(status: status)
+        }
+    }
+    
+    func showMsg(status: String) {
+        statusMessage.setTitle(status, for: .normal)
+        statusMessage.isHidden = false
+    }
     /*
     // MARK: - Navigation
 
