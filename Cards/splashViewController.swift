@@ -11,7 +11,6 @@ import UIKit
 class splashViewController: UIViewController {
 
     @IBAction func playClicked(_ sender: UIButton) {
-        print("WORKS!")
     }
     
     override func viewDidLoad() {
