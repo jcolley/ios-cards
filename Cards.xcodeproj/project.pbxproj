@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F30BD5FA1F0F03D10073DA6D /* blackjackViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F30BD5F91F0F03D10073DA6D /* blackjackViewController.swift */; };
 		F377B3371F0D9E0100E5B8AE /* cardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F377B3361F0D9E0100E5B8AE /* cardController.swift */; };
 		F38A1CAD1F0EE58300DADEBF /* splashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38A1CAC1F0EE58300DADEBF /* splashViewController.swift */; };
 		F38A1CAF1F0EE5D200DADEBF /* splash.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F38A1CAE1F0EE5D200DADEBF /* splash.storyboard */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F30BD5F91F0F03D10073DA6D /* blackjackViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = blackjackViewController.swift; sourceTree = "<group>"; };
 		F377B3361F0D9E0100E5B8AE /* cardController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = cardController.swift; path = "../../../Deck of Cards/cardController.swift"; sourceTree = "<group>"; };
 		F38A1CAC1F0EE58300DADEBF /* splashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = splashViewController.swift; sourceTree = "<group>"; };
 		F38A1CAE1F0EE5D200DADEBF /* splash.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = splash.storyboard; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				F3EFFB8E1F0D95E7008088B9 /* Info.plist */,
 				F38A1CAC1F0EE58300DADEBF /* splashViewController.swift */,
 				F38A1CAE1F0EE5D200DADEBF /* splash.storyboard */,
+				F30BD5F91F0F03D10073DA6D /* blackjackViewController.swift */,
 			);
 			path = Cards;
 			sourceTree = "<group>";
@@ -148,6 +151,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F377B3371F0D9E0100E5B8AE /* cardController.swift in Sources */,
+				F30BD5FA1F0F03D10073DA6D /* blackjackViewController.swift in Sources */,
 				F3EFFB851F0D95E7008088B9 /* ViewController.swift in Sources */,
 				F3EFFB831F0D95E7008088B9 /* AppDelegate.swift in Sources */,
 				F38A1CAD1F0EE58300DADEBF /* splashViewController.swift in Sources */,

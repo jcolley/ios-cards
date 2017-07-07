@@ -221,10 +221,10 @@
             </objects>
             <point key="canvasLocation" x="865" y="130"/>
         </scene>
-        <!--View Controller-->
+        <!--Blackjack View Controller-->
         <scene sceneID="pys-ap-eRN">
             <objects>
-                <viewController id="dRO-tY-XhI" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="blackjack" id="dRO-tY-XhI" customClass="blackjackViewController" customModule="Cards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hJh-M5-ddY"/>
                         <viewControllerLayoutGuide type="bottom" id="ibW-8R-hZj"/>
@@ -244,14 +244,23 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="63G-r6-1fv">
                                 <rect key="frame" x="158" y="282" width="30" height="30"/>
                                 <state key="normal" title="Hit"/>
+                                <connections>
+                                    <action selector="hitButtonTapped:" destination="dRO-tY-XhI" eventType="touchUpInside" id="hh8-ia-iP3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Crg-c9-Dy9">
                                 <rect key="frame" x="387" y="282" width="33" height="30"/>
                                 <state key="normal" title="Pass"/>
+                                <connections>
+                                    <action selector="passButtonTapped:" destination="dRO-tY-XhI" eventType="touchUpInside" id="1aT-MB-HWV"/>
+                                </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xOv-76-rOm">
                                 <rect key="frame" x="264" y="282" width="40" height="30"/>
                                 <state key="normal" title="BUST"/>
+                                <connections>
+                                    <action selector="bustButtonTapped:" destination="dRO-tY-XhI" eventType="touchUpInside" id="kzP-65-oc8"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vfv-4g-VZr">
                                 <rect key="frame" x="20" y="20" width="55" height="30"/>
@@ -259,6 +268,9 @@
                                 <state key="normal" title="Restart">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="restartButtonTapped:" destination="dRO-tY-XhI" eventType="touchUpInside" id="XbQ-ss-YdH"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DfV-JS-d4E">
                                 <rect key="frame" x="507" y="20" width="41" height="30"/>
@@ -266,12 +278,19 @@
                                 <state key="normal" title="Menu">
                                     <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="menuButtonTapped:" destination="dRO-tY-XhI" eventType="touchUpInside" id="WVj-y5-ZPh"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ej5-gX-g7I" userLabel="Dealer0">
                                 <rect key="frame" x="332" y="0.0" width="88" height="113"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="6Lg-KI-dVI">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="f2d-ny-5Mu">
+                                        <rect key="frame" x="8" y="10" width="72" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R42-bE-2gs">
@@ -298,6 +317,10 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="vco-gi-aEC">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="w8Y-Iu-LTn">
+                                        <rect key="frame" x="8" y="10" width="72" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9ZM-Wn-dWM">
@@ -374,11 +397,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnV-z2-p2S">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EnV-z2-p2S" userLabel="HitPIle0">
                                 <rect key="frame" x="9" y="121" width="88" height="113"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="it3-Sq-iKb">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="L8W-4A-Z20">
+                                        <rect key="frame" x="8" y="10" width="72" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="27k-Vs-r3B">
@@ -395,11 +422,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7Z-1P-nMM">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N7Z-1P-nMM" userLabel="HitPile1">
                                 <rect key="frame" x="50" y="171" width="88" height="113"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="7Qa-UM-xdQ">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="Duo-e0-tZ8">
+                                        <rect key="frame" x="8" y="10" width="72" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cY7-8J-aMi">
@@ -416,11 +447,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6O-Gp-Yae">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C6O-Gp-Yae" userLabel="HitPile2">
                                 <rect key="frame" x="105" y="121" width="88" height="113"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="nlm-mh-87E">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="VdS-Pz-q1O">
+                                        <rect key="frame" x="8" y="10" width="72" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sCI-fj-ygz">
@@ -441,11 +476,15 @@
                                     <constraint firstAttribute="width" constant="88" id="xEa-rh-gWj"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgC-oV-0wX">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mgC-oV-0wX" userLabel="HitPile3">
                                 <rect key="frame" x="147" y="171" width="88" height="113"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="TuE-R1-Kz7">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="xPF-ar-M6Z">
+                                        <rect key="frame" x="8" y="10" width="72" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LX-sC-bGI">
@@ -466,11 +505,15 @@
                                     <constraint firstAttribute="width" constant="88" id="zZ5-G0-opK"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ol-EI-E6q">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Ol-EI-E6q" userLabel="HitPile4">
                                 <rect key="frame" x="202" y="121" width="88" height="113"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="E3a-7s-ZRh">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="Dlg-bJ-XPT">
+                                        <rect key="frame" x="8" y="10" width="72" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mhd-h1-QCO">
@@ -487,11 +530,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOw-XW-xaa">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gOw-XW-xaa" userLabel="HitPile5">
                                 <rect key="frame" x="244" y="171" width="88" height="113"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="GfO-Sv-Bbh">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="oTJ-u0-Lf0">
+                                        <rect key="frame" x="8" y="10" width="72" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uNd-qE-tM7">
@@ -508,11 +555,15 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljr-Ja-LoU">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ljr-Ja-LoU" userLabel="HitPile6">
                                 <rect key="frame" x="299" y="121" width="88" height="113"/>
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card" translatesAutoresizingMaskIntoConstraints="NO" id="3wu-Ev-WIq">
                                         <rect key="frame" x="0.0" y="0.0" width="82" height="113"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="cardBack" translatesAutoresizingMaskIntoConstraints="NO" id="ux7-hW-k7W">
+                                        <rect key="frame" x="8" y="10" width="72" height="92"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="value" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KTS-TC-0B1">
@@ -537,12 +588,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="ljr-Ja-LoU" firstAttribute="leading" secondItem="8Ol-EI-E6q" secondAttribute="trailing" constant="9" id="242-sH-9dQ"/>
-                            <constraint firstItem="Vfv-4g-VZr" firstAttribute="top" secondItem="hJh-M5-ddY" secondAttribute="bottom" id="2fi-9N-mvA"/>
                             <constraint firstItem="gOw-XW-xaa" firstAttribute="bottom" secondItem="mgC-oV-0wX" secondAttribute="bottom" id="6ZM-iM-8dm"/>
-                            <constraint firstItem="DfV-JS-d4E" firstAttribute="top" secondItem="hJh-M5-ddY" secondAttribute="bottom" id="6v7-L7-Zh7"/>
                             <constraint firstItem="N7Z-1P-nMM" firstAttribute="leading" secondItem="dAj-HV-XaB" secondAttribute="leadingMargin" constant="30" id="77q-84-r3F"/>
                             <constraint firstItem="xOv-76-rOm" firstAttribute="leading" secondItem="63G-r6-1fv" secondAttribute="trailing" constant="76" id="7aK-B4-u5p"/>
-                            <constraint firstItem="ibW-8R-hZj" firstAttribute="top" secondItem="mgC-oV-0wX" secondAttribute="bottom" constant="36" id="8JW-78-VS2"/>
                             <constraint firstItem="HAM-bP-UeE" firstAttribute="leading" secondItem="yjs-36-Fxb" secondAttribute="leading" id="9YL-oy-qCP"/>
                             <constraint firstItem="cCy-RA-ZEL" firstAttribute="leading" secondItem="dAj-HV-XaB" secondAttribute="leading" id="AmM-OA-Mv9"/>
                             <constraint firstItem="Vfv-4g-VZr" firstAttribute="leading" secondItem="dAj-HV-XaB" secondAttribute="leadingMargin" id="BHB-hY-Ykh"/>
@@ -562,24 +610,27 @@
                             <constraint firstItem="Hg2-gZ-efD" firstAttribute="leading" secondItem="Vfv-4g-VZr" secondAttribute="trailing" constant="25" id="VsP-om-O0m"/>
                             <constraint firstAttribute="trailing" secondItem="cCy-RA-ZEL" secondAttribute="trailing" id="WLS-L3-gGt"/>
                             <constraint firstItem="ptz-R9-ACY" firstAttribute="leading" secondItem="ljr-Ja-LoU" secondAttribute="trailing" constant="82" id="We3-AB-nYj"/>
-                            <constraint firstItem="ibW-8R-hZj" firstAttribute="top" secondItem="Crg-c9-Dy9" secondAttribute="bottom" constant="8" id="XXg-DI-hOt"/>
                             <constraint firstItem="63G-r6-1fv" firstAttribute="top" secondItem="C6O-Gp-Yae" secondAttribute="bottom" constant="48" id="Yan-l6-335"/>
                             <constraint firstItem="ej5-gX-g7I" firstAttribute="top" secondItem="dAj-HV-XaB" secondAttribute="topMargin" id="Yg8-UR-wUQ"/>
+                            <constraint firstItem="ibW-8R-hZj" firstAttribute="top" secondItem="63G-r6-1fv" secondAttribute="bottom" constant="8" id="Zix-Qf-I02"/>
                             <constraint firstItem="8Ol-EI-E6q" firstAttribute="top" secondItem="C6O-Gp-Yae" secondAttribute="top" id="Zm5-jn-trz"/>
-                            <constraint firstItem="ibW-8R-hZj" firstAttribute="top" secondItem="63G-r6-1fv" secondAttribute="bottom" constant="8" id="azh-Nh-7Px"/>
                             <constraint firstItem="HAM-bP-UeE" firstAttribute="bottom" secondItem="ptz-R9-ACY" secondAttribute="bottom" id="bKS-85-qic"/>
                             <constraint firstItem="8Ol-EI-E6q" firstAttribute="bottom" secondItem="C6O-Gp-Yae" secondAttribute="bottom" id="cNi-L3-mlF"/>
                             <constraint firstItem="Crg-c9-Dy9" firstAttribute="leading" secondItem="xOv-76-rOm" secondAttribute="trailing" constant="83" id="clg-dg-1gV"/>
                             <constraint firstItem="xOv-76-rOm" firstAttribute="top" secondItem="ljr-Ja-LoU" secondAttribute="bottom" constant="48" id="dZ9-6r-Zpp"/>
                             <constraint firstItem="DfV-JS-d4E" firstAttribute="trailing" secondItem="dAj-HV-XaB" secondAttribute="trailingMargin" id="eIM-PD-SHk"/>
                             <constraint firstItem="cCy-RA-ZEL" firstAttribute="top" secondItem="dAj-HV-XaB" secondAttribute="top" id="eK7-g6-JUK"/>
+                            <constraint firstItem="ibW-8R-hZj" firstAttribute="top" secondItem="mgC-oV-0wX" secondAttribute="bottom" constant="36" id="elS-f1-QAl"/>
                             <constraint firstItem="Hg2-gZ-efD" firstAttribute="top" secondItem="ej5-gX-g7I" secondAttribute="top" id="gF4-yd-Oo2"/>
+                            <constraint firstItem="ibW-8R-hZj" firstAttribute="top" secondItem="Crg-c9-Dy9" secondAttribute="bottom" constant="8" id="jJa-hK-yRU"/>
                             <constraint firstItem="C6O-Gp-Yae" firstAttribute="top" secondItem="Hg2-gZ-efD" secondAttribute="bottom" constant="8" symbolic="YES" id="m2e-ut-WRv"/>
                             <constraint firstItem="Hg2-gZ-efD" firstAttribute="trailing" secondItem="63G-r6-1fv" secondAttribute="trailing" id="nnr-DB-9lM"/>
-                            <constraint firstItem="ibW-8R-hZj" firstAttribute="top" secondItem="xOv-76-rOm" secondAttribute="bottom" constant="8" id="oCe-YU-i97"/>
                             <constraint firstItem="HAM-bP-UeE" firstAttribute="leading" secondItem="ljr-Ja-LoU" secondAttribute="trailing" constant="8" symbolic="YES" id="pNo-or-LY7"/>
                             <constraint firstItem="mgC-oV-0wX" firstAttribute="leading" secondItem="N7Z-1P-nMM" secondAttribute="trailing" constant="9" id="qlJ-GX-cZl"/>
+                            <constraint firstItem="Vfv-4g-VZr" firstAttribute="top" secondItem="hJh-M5-ddY" secondAttribute="bottom" id="rGZ-Lv-FzY"/>
+                            <constraint firstItem="DfV-JS-d4E" firstAttribute="top" secondItem="hJh-M5-ddY" secondAttribute="bottom" id="rTk-tN-fw1"/>
                             <constraint firstItem="C6O-Gp-Yae" firstAttribute="leading" secondItem="EnV-z2-p2S" secondAttribute="trailing" constant="8" symbolic="YES" id="rwh-95-imx"/>
+                            <constraint firstItem="ibW-8R-hZj" firstAttribute="top" secondItem="xOv-76-rOm" secondAttribute="bottom" constant="8" id="tgj-GN-SJy"/>
                             <constraint firstItem="HAM-bP-UeE" firstAttribute="top" secondItem="ptz-R9-ACY" secondAttribute="top" id="uGc-gK-Ilm"/>
                             <constraint firstItem="gOw-XW-xaa" firstAttribute="top" secondItem="mgC-oV-0wX" secondAttribute="top" id="vNp-Yj-Bxw"/>
                             <constraint firstItem="8Ol-EI-E6q" firstAttribute="leading" secondItem="dAj-HV-XaB" secondAttribute="leading" constant="202" id="wVG-Jw-HHO"/>
@@ -589,6 +640,49 @@
                             <constraint firstItem="HAM-bP-UeE" firstAttribute="leading" secondItem="gOw-XW-xaa" secondAttribute="trailing" constant="63" id="zFg-P9-wnE"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="dealerHandCardback0" destination="f2d-ny-5Mu" id="Syz-Bk-ISb"/>
+                        <outlet property="dealerHandCardback1" destination="w8Y-Iu-LTn" id="PEi-fJ-9QW"/>
+                        <outlet property="dealerHandSuit0" destination="2jH-jn-Jud" id="wUx-I1-XGb"/>
+                        <outlet property="dealerHandSuit1" destination="uCM-hr-4yc" id="csO-Vs-PBz"/>
+                        <outlet property="dealerHandValue0" destination="R42-bE-2gs" id="yRY-Qd-ppi"/>
+                        <outlet property="dealerHandValue1" destination="9ZM-Wn-dWM" id="uAr-9Y-3N6"/>
+                        <outlet property="hitPileCard0" destination="it3-Sq-iKb" id="tdG-3w-9bO"/>
+                        <outlet property="hitPileCard1" destination="7Qa-UM-xdQ" id="2xt-hw-V2L"/>
+                        <outlet property="hitPileCard2" destination="nlm-mh-87E" id="rO0-0j-m4H"/>
+                        <outlet property="hitPileCard3" destination="TuE-R1-Kz7" id="G9d-YV-3jN"/>
+                        <outlet property="hitPileCard4" destination="E3a-7s-ZRh" id="gab-xX-Wm4"/>
+                        <outlet property="hitPileCard5" destination="GfO-Sv-Bbh" id="T1I-Hn-EoI"/>
+                        <outlet property="hitPileCard6" destination="3wu-Ev-WIq" id="W2i-bG-RRR"/>
+                        <outlet property="hitPileCardback0" destination="it3-Sq-iKb" id="ntA-NV-Jbu"/>
+                        <outlet property="hitPileCardback1" destination="Duo-e0-tZ8" id="OFU-Df-jli"/>
+                        <outlet property="hitPileCardback2" destination="VdS-Pz-q1O" id="bNg-so-iRG"/>
+                        <outlet property="hitPileCardback3" destination="xPF-ar-M6Z" id="3Ti-QX-H10"/>
+                        <outlet property="hitPileCardback4" destination="Dlg-bJ-XPT" id="Hez-pe-eVE"/>
+                        <outlet property="hitPileCardback5" destination="oTJ-u0-Lf0" id="jcP-RZ-Jty"/>
+                        <outlet property="hitPileCardback6" destination="ux7-hW-k7W" id="dwp-md-4le"/>
+                        <outlet property="hitPileSuit0" destination="K0I-4E-bCS" id="Jao-4L-Vwo"/>
+                        <outlet property="hitPileSuit1" destination="ldE-4n-hP0" id="DpQ-7m-xmo"/>
+                        <outlet property="hitPileSuit2" destination="hom-JT-xvw" id="7js-Gy-mdG"/>
+                        <outlet property="hitPileSuit3" destination="2a6-xE-msH" id="gBQ-t8-qow"/>
+                        <outlet property="hitPileSuit4" destination="Izt-h1-GxA" id="UzQ-jF-QKk"/>
+                        <outlet property="hitPileSuit5" destination="l3I-vb-DXV" id="zZ0-rQ-XIj"/>
+                        <outlet property="hitPileSuit6" destination="Org-3X-Bag" id="cgq-z8-RVH"/>
+                        <outlet property="hitPileValue0" destination="27k-Vs-r3B" id="XLT-5k-yyj"/>
+                        <outlet property="hitPileValue1" destination="cY7-8J-aMi" id="XqS-T0-ub8"/>
+                        <outlet property="hitPileValue2" destination="sCI-fj-ygz" id="ONG-dF-rbC"/>
+                        <outlet property="hitPileValue3" destination="9LX-sC-bGI" id="ka2-Ol-pXv"/>
+                        <outlet property="hitPileValue4" destination="mhd-h1-QCO" id="JhD-cP-j2a"/>
+                        <outlet property="hitPileValue5" destination="uNd-qE-tM7" id="aua-Nq-GNg"/>
+                        <outlet property="hitPileValue6" destination="KTS-TC-0B1" id="aqR-NK-lyE"/>
+                        <outlet property="playDeckBack" destination="8xr-yb-WNN" id="zHm-u4-pTD"/>
+                        <outlet property="playDeckCard" destination="KPw-ku-b0F" id="OVS-AG-k8R"/>
+                        <outlet property="playerHand1" destination="RoJ-Mg-DQu" id="m59-og-s3Y"/>
+                        <outlet property="playerHandSuit0" destination="86N-Ea-EPK" id="6nU-iR-V0B"/>
+                        <outlet property="playerHandSuit1" destination="RoJ-Mg-DQu" id="p1Q-mo-OzS"/>
+                        <outlet property="playerHandValue0" destination="79K-0n-fev" id="Ag0-T4-R1U"/>
+                        <outlet property="playerHandValue1" destination="CmJ-XJ-SES" id="kAX-2L-K8f"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dlE-7f-cfl" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
