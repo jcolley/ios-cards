@@ -647,14 +647,14 @@
                         <outlet property="dealerHandSuit1" destination="uCM-hr-4yc" id="csO-Vs-PBz"/>
                         <outlet property="dealerHandValue0" destination="R42-bE-2gs" id="yRY-Qd-ppi"/>
                         <outlet property="dealerHandValue1" destination="9ZM-Wn-dWM" id="uAr-9Y-3N6"/>
-                        <outlet property="hitPileCard0" destination="it3-Sq-iKb" id="tdG-3w-9bO"/>
+                        <outlet property="hitPileCard0" destination="it3-Sq-iKb" id="ais-DL-6ul"/>
                         <outlet property="hitPileCard1" destination="7Qa-UM-xdQ" id="2xt-hw-V2L"/>
                         <outlet property="hitPileCard2" destination="nlm-mh-87E" id="rO0-0j-m4H"/>
                         <outlet property="hitPileCard3" destination="TuE-R1-Kz7" id="G9d-YV-3jN"/>
                         <outlet property="hitPileCard4" destination="E3a-7s-ZRh" id="gab-xX-Wm4"/>
                         <outlet property="hitPileCard5" destination="GfO-Sv-Bbh" id="T1I-Hn-EoI"/>
                         <outlet property="hitPileCard6" destination="3wu-Ev-WIq" id="W2i-bG-RRR"/>
-                        <outlet property="hitPileCardback0" destination="it3-Sq-iKb" id="ntA-NV-Jbu"/>
+                        <outlet property="hitPileCardback0" destination="L8W-4A-Z20" id="7mY-s6-Uvh"/>
                         <outlet property="hitPileCardback1" destination="Duo-e0-tZ8" id="OFU-Df-jli"/>
                         <outlet property="hitPileCardback2" destination="VdS-Pz-q1O" id="bNg-so-iRG"/>
                         <outlet property="hitPileCardback3" destination="xPF-ar-M6Z" id="3Ti-QX-H10"/>
@@ -677,7 +677,6 @@
                         <outlet property="hitPileValue6" destination="KTS-TC-0B1" id="aqR-NK-lyE"/>
                         <outlet property="playDeckBack" destination="8xr-yb-WNN" id="zHm-u4-pTD"/>
                         <outlet property="playDeckCard" destination="KPw-ku-b0F" id="OVS-AG-k8R"/>
-                        <outlet property="playerHand1" destination="RoJ-Mg-DQu" id="m59-og-s3Y"/>
                         <outlet property="playerHandSuit0" destination="86N-Ea-EPK" id="6nU-iR-V0B"/>
                         <outlet property="playerHandSuit1" destination="RoJ-Mg-DQu" id="p1Q-mo-OzS"/>
                         <outlet property="playerHandValue0" destination="79K-0n-fev" id="Ag0-T4-R1U"/>
